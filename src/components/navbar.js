@@ -1,9 +1,10 @@
 import React from 'react';
-import { Button, Navbar, Container, Nav } from 'react-bootstrap';
+import {Navbar, Container, Nav } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './navbar.css';
 function Navibar() {
     return (
-        <div>
+        <div className="nav">
             <Navbar bg="dark" variant="dark">
                 <Container>
                 <Navbar.Brand href="#home">Navbar</Navbar.Brand>
@@ -14,7 +15,6 @@ function Navibar() {
                 </Nav>
                 </Container>
             </Navbar>
-            <Button variant="primary">Primary</Button>{' '}
             
             
         </div>
