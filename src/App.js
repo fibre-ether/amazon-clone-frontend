@@ -1,6 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import Navibar from './components/navbar';
-import AlertDismiss from './components/minor_comps';
+import AlertDismiss from './components/alert';
+import Login from './components/login';
+import Signin from './components/signin';
+import {Button} from 'react-bootstrap';
+import './components/minor_comps.css';
 import './App.css';
 function App() {
   const [showAlert, setShowAlert] = useState(false);
@@ -12,15 +16,16 @@ function App() {
 
   const incr = () => {
     setNum(num+1);
-    setShowAlert(true);
+    setShowAlert(!showAlert);
     console.log("incr");
   };
 
   return(
     <div >
       <Navibar />
-      <button onClick={incr}>{num}>Click me to show alert</button>
-      <AlertDismiss show={showAlert} setShow={setShowAlert} title="Error Title" alert="Alert text" />
+      <AlertDismiss show={showAlert} setShow={setShowAlert} title="Error Title"/>
+      <Signin />
+      <Button onClick={incr} variant="primary">Press for Error</Button>
     </div>
     
   );

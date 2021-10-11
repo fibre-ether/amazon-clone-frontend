@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './navbar.css';
 function Navibar() {
     return (
-        <div className="nav">
+        <div className="navibar">
             <Navbar bg="dark" variant="dark">
                 <Container>
                 <Navbar.Brand href="#home">Navbar</Navbar.Brand>

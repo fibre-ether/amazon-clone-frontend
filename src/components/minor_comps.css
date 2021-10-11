@@ -2,6 +2,23 @@
     position: fixed;
     bottom: 0;
     right: 0;
-    max-width: 50vw;
+    width: auto;
     margin: 10px;
+}
+
+.login-internal {
+    margin: 5%;
+}
+
+.login-container {
+    min-height: 50%;
+    margin-top: 20vh;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+.signin-button {
+    width: auto;
+    position: absolute;
+    right: calc(50%-width);
 }
