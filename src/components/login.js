@@ -26,8 +26,8 @@ function Login(props) {
                     <Col sm="10">
                         <Form.Control type="password" placeholder="Password" />
                     </Col>
-                    <Button className="signin-button" variant="primary">Primary</Button>
                     </Form.Group>
+                    <Button  variant="primary">Primary</Button>
                 </Form>
             </Card.Body>
         </Card>
