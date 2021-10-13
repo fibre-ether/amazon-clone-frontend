@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Navbar, Container, Nav, Alert } from 'react-bootstrap';
+import {Navbar, Container, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './navbar.css';
@@ -10,7 +10,7 @@ function Navibar() {
         <div className="navibar">
             <Navbar bg="dark" variant="dark">
                 <Container>
-                <Navbar.Brand><a style={{ cursor:"pointer" }} href={null} onClick={() => setShowAlert(true)}>Navibar</a></Navbar.Brand>
+                <Navbar.Brand><a style={{ cursor:"pointer" }} href={() => false} onClick={() => setShowAlert(!showAlert)}>Navibar</a></Navbar.Brand>
                 <Nav className="me-auto">
                 <Nav.Link as={Link} to="/home">Home</Nav.Link>
                 <Nav.Link as={Link} to="/login">Login</Nav.Link>

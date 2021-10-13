@@ -22,3 +22,8 @@
     position: absolute;
     right: calc(50%-width);
 }
+
+.itemcard { 
+    width: 18rem;
+    margin: 20px;
+}
