@@ -7,7 +7,7 @@ function ItemCard(props) {
     console.log("itemCard")
     return(
         <Card className="itemcard" >
-            <Card.Img variant="top" src={props.img} />
+            <Card.Img className="card-image" variant="top" src={props.img} />
                 <Card.Body>
                     <Card.Title>{props.title}</Card.Title>
                     <Card.Text>

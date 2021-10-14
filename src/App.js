@@ -15,7 +15,7 @@ function App() {
 
   return(
     <BrowserRouter>
-      <Navibar />
+      <Navibar search="true" />
       <Switch>
         <Route path="/login" component={login_page} />
         <Route path="/home" exact component={Home} />

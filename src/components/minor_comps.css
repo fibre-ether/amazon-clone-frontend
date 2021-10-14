@@ -24,6 +24,12 @@
 }
 
 .itemcard { 
-    width: 18rem;
-    margin: 20px;
+    width: 20vw;
+    height: 100vh;
+    margin-top: 1vh;
+}
+
+.card-image {
+    height: 40vh;
+    width: 1vw;
 }
