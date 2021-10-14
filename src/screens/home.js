@@ -6,7 +6,7 @@ var items = itemsJSON.data.slice(0,50)
 console.log(items[0]);
 function Home(props) {
     return(
-        <>
+        <div className="home-body">
         <Row>
         {items.map((item)=>{
             return(
@@ -16,7 +16,7 @@ function Home(props) {
             )
         })}
         </Row> 
-        </>
+        </div>
     );
 }
 
