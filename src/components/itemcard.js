@@ -4,7 +4,6 @@ import './minor_comps.css';
 
 
 function ItemCard(props) {
-    console.log("itemCard")
     return(
         <Card className="itemcard" >
             <Card.Img className="card-image" variant="top" src={props.img} />
