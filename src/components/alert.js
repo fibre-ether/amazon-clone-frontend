@@ -3,8 +3,6 @@ import {Alert} from 'react-bootstrap';
 import './minor_comps.css';
 
 function AlertDismiss(props) {
-    console.log(props);
-    console.log("Alert");
     if (props.show) {
       return (
         <Alert className="alert" variant="danger" onClose={() => props.setShow(false)} dismissible>
