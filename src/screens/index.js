@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Nav, Button, Card } from 'react-bootstrap';
 import { useLocation } from 'react-router';
+import AlertDismiss from '../components/alert';
 
 
 function Index(props) {
@@ -11,12 +12,13 @@ function Index(props) {
         if (!loc.hash) {
             setCardText("Welcome to BestSell");
         } else if (loc.hash==="#1") {
-            setCardText("BestSell is an Amazon(e-commerce website) clone made using React.js.");
+            setCardText(<><strong>BestSell</strong> is an Amazon(e-commerce website) clone made using React.js.</>);
         } else {
-            setCardText("Search for anything, BestSell takes your input, searches Amazon for product details before showing them to you.");
+            setCardText(<>Search for anything, <strong>BestSell</strong> takes your input, searches Amazon for product details and shows them to you.</>);
         }
     }, [loc]);
     return (
+            <>
             <div className="home-info">
                 <Card>
                     <Card.Header>
@@ -37,6 +39,7 @@ function Index(props) {
                     </Card.Body>
                 </Card>
             </div>
+            </>
     );
 }
 

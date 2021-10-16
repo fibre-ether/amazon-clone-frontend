@@ -53,7 +53,28 @@
 
 .card-image {
     height: 40vh;
-    width: 1vw;
+}
+
+.card-reviews {
+    height: 2vh;
+}
+
+.card-txt {
+    height: 30vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+}
+
+.card-button {
+    position: absolute;
+    height: auto;
 }
 
 .spinner {

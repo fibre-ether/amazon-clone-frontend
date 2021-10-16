@@ -4,16 +4,20 @@ import './minor_comps.css';
 
 
 function ItemCard(props) {
-    console.log("itemCard")
     return(
         <Card className="itemcard" >
             <Card.Img className="card-image" variant="top" src={props.img} />
                 <Card.Body>
                     <Card.Title className="card-title" >{props.title}</Card.Title>
-                    <Card.Text className="card-text" >
+                    <Card.Text className="card-reviews" >
+                    <strong>{props.reviews} reviews</strong>
+                    </Card.Text>
+                    <Card.Text className="card-txt" >
                     {props.text}
                     </Card.Text>
-                    <Button className="card-button" variant="primary">{props.button}</Button>
+                    <div className="button-container">
+                    <Button className="card-button" href={props.link} variant="primary">{props.button}</Button>
+                    </div>
                 </Card.Body>
         </Card>
     )
