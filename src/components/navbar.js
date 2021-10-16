@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
-import {Navbar, Container, Nav, Col, Row, Form, Button } from 'react-bootstrap';
+import {Navbar, Container, Nav, Form, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { useHistory } from 'react-router';
+import { useHistory, useLocation } from 'react-router';
 import SearchIcon from '@material-ui/icons/Search';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './navbar.css';
@@ -11,6 +11,7 @@ function Navibar(props) {
     const [searchTerm, setSearchTerm] = useState({message:""});
     
     const history = useHistory();
+    const loc = useLocation();
 
 
 
@@ -23,26 +24,19 @@ function Navibar(props) {
         console.log(searchTerm);
 
         history.push({
-            pathname: "/home",
+            pathname: "/search",
             search: searchTerm
         });
     }
     
     return (
-        <div className="navibar">
-            <Navbar bg="dark" variant="dark">
-                <Container>
-                <Navbar.Brand><a style={{ cursor:"pointer" }} href={() => false} onClick={() => setShowAlert(!showAlert)}>Navibar</a></Navbar.Brand>
-                <Nav className="me-auto">
-                <Nav.Link as={Link} to="/home">Home</Nav.Link>
-                <Nav.Link as={Link} to="/login">Login</Nav.Link>
-                <Nav.Link as={Link} to="/signup">Signup</Nav.Link>
-                </Nav>
+        <div>
+            <Navbar className="navibar" bg="dark" variant="dark">
+                <Container className="nav-text-container">
+                <Navbar.Brand><Nav.Link as={Link} to="/home">BestSell</Nav.Link></Navbar.Brand>
                 </Container>
-                {props.search=="true" ?
-                    <Form onSubmit={handleSubmit}>
-                    <Row className="search-bar">
-                    <Col sm={3} className="my-1">
+                {props.search==="true" ?
+                <Form className="search-div" onSubmit={handleSubmit}>
                     <Form.Label htmlFor="inlineFormInputName" visuallyHidden>
                         Name
                     </Form.Label>
@@ -50,14 +44,11 @@ function Navibar(props) {
                     className="search-area" 
                     id="inlineFormInputName" 
                     placeholder="Search"
+                    value={searchTerm.message}
                     onChange={handleChange}
                     required
                     />
-                    </Col>
-                    <Col xs="auto" className="my-1">
                     <Button className="search-button" type="submit"><SearchIcon/></Button>
-                    </Col>
-                </Row>
                 </Form> : null
                 }
             </Navbar>

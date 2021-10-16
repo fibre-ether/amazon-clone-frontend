@@ -3,22 +3,27 @@
     top: 0;
     width: 100%;
     z-index: 2;
+    max-height: 10vh;
 }
 
-.search-bar{
-    width: 30vw;
-    right: 0;
+.nav-text-container{
+    position: relative;
 }
+
+.search-div{
+    display: flex;
+    width: auto;
+
+}
+
+.search-bar {
+    display: inline-block;
+  }
 
 .search-area{
-    position: relative;
-    left: 0;
-    width: 20vw;
-    height: 6vh;
+    margin-right: 10px;
 }
 
 .search-button{
-    position: relative;
-    right: -13vw;
-    height: 6vh;
+    margin-right: 0;
 }

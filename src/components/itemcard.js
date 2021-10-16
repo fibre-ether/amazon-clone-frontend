@@ -8,11 +8,11 @@ function ItemCard(props) {
         <Card className="itemcard" >
             <Card.Img className="card-image" variant="top" src={props.img} />
                 <Card.Body>
-                    <Card.Title>{props.title}</Card.Title>
-                    <Card.Text>
+                    <Card.Title className="card-title" >{props.title}</Card.Title>
+                    <Card.Text className="card-text" >
                     {props.text}
                     </Card.Text>
-                    <Button variant="primary">{props.button}</Button>
+                    <Button className="card-button" variant="primary">{props.button}</Button>
                 </Card.Body>
         </Card>
     )

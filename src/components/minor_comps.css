@@ -1,6 +1,24 @@
 .home-body{
     margin-top: 10vh;
 }
+.home-info{
+    margin: 35vh 5vh 0vh 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-group {
+    position: relative;
+}
+
+.info-card-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+}
 
 .alert {
     position: fixed;
@@ -36,4 +54,9 @@
 .card-image {
     height: 40vh;
     width: 1vw;
+}
+
+.spinner {
+    position: absolute;
+    margin: 50%;
 }
