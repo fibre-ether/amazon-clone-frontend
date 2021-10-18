@@ -15,7 +15,7 @@ function Home(props) {
     
     const GetItems = async() => {
         try {
-            const url = "http://localhost:5000";
+            const url = "http://localhost:3000";
             const config = {
                 method: 'get',
                 url: url,
